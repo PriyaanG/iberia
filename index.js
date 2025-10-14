@@ -1,7 +1,10 @@
-require('dotenv').config();
-const express = require('express');
-const axios = require('axios');
-const PORT = process.env.PORT;
+import express from 'express';
+import axios from 'axios';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const PORT = process.env.PORT || 5173;
 const app = express();
 
 app.get('/iberia/discordoauth/redirect', async (req, res) => {
@@ -14,14 +17,13 @@ app.get('/iberia/discordoauth/redirect', async (req, res) => {
   console.log("🔹 Received OAuth code:", code);
   console.log("🔹 ClientId:", process.env.ClientId);
   console.log("🔹 ClientSecret length:", process.env.ClientSecret?.length);
-  console.log("🔹 Redirect URI:", 'https://congenial-happiness-g4x94w967vvjh9g9q-5174.app.github.dev/iberia/discordoauth/redirect');
 
   const formData = new URLSearchParams({
     client_id: process.env.ClientId,
     client_secret: process.env.ClientSecret,
     grant_type: 'authorization_code',
     code: code.toString(),
-    redirect_uri: 'https://congenial-happiness-g4x94w967vvjh9g9q-5174.app.github.dev/iberia/discordoauth/redirect',
+    redirect_uri: 'https://priyaang.github.io/iberia/discordoauth/redirect',
   });
 
   try {
@@ -48,7 +50,7 @@ app.get('/iberia/discordoauth/redirect', async (req, res) => {
 
     console.log("✅ User info:", userinfo.data);
     console.log(userinfo.data.username)
-     res.redirect(`https://congenial-happiness-g4x94w967vvjh9g9q-5173.app.github.dev/iberia/index.html?username=${encodeURIComponent(userinfo.data.username)}&state=${encodeURIComponent(state)}`);
+     res.redirect(`https://priyaang.github.io/iberia/index.html?username=${encodeURIComponent(userinfo.data.username)}&state=${encodeURIComponent(state)}`);
 
   } catch (err) {
     console.error("❌ Token exchange failed:");

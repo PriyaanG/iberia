@@ -18,7 +18,7 @@ function flightNoSet (flightNum){
     <>
     <h1 className="RouteName" style={{ visibility:flightName}}>San Francisco to Madrid</h1>
     <h1 className="DeptTime" style={{visibility:flightName}}>Departure Time: 11pm EDT</h1>
-    <div className="floatBottom" style={{visibility:flightName}}><h1 className="ReduceWidth">Booking Class:</h1><a href="https://discord.com/oauth2/authorize?client_id=1347651472656961536&response_type=code&redirect_uri=https%3A%2F%2Fcongenial-happiness-g4x94w967vvjh9g9q-5174.app.github.dev%2Fiberia%2Fdiscordoauth%2Fredirect&scope=identify+guilds&state=Economy"><button className="splitBtns">Economy</button></a><a href="https://discord.com/oauth2/authorize?client_id=1347651472656961536&response_type=code&redirect_uri=https%3A%2F%2Fcongenial-happiness-g4x94w967vvjh9g9q-5174.app.github.dev%2Fiberia%2Fdiscordoauth%2Fredirect&scope=identify+guilds&state=Business"><button>Business</button></a></div>
+    <div className="floatBottom" style={{visibility:flightName}}><h1 className="ReduceWidth">Booking Class:</h1><a href="https://discord.com/oauth2/authorize?client_id=1347651472656961536&response_type=code&redirect_uri=https://priyaang.github.io%2Fiberia%2Fdiscordoauth%2Fredirect&scope=identify+guilds&state=Economy"><button className="splitBtns">Economy</button></a><a href="https://discord.com/oauth2/authorize?client_id=1347651472656961536&response_type=code&redirect_uri=https://priyaang.github.io%2Fiberia%2Fdiscordoauth%2Fredirect&scope=identify+guilds&state=Business"><button>Business</button></a></div>
     <Navbar className="bg-body-tertiary navbar" >
       <a href="/iberia/index.html">
           <Navbar.Brand>
