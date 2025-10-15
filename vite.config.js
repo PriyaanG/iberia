@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'  // ✅ Use SWC version instead of Babel
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: './', // important for GitHub Pages routing
   plugins: [react()],
+  base: './',          // <-- Must be './', not '/'
+  build: {
+    outDir: 'dist',    // Default, but make sure this line is here
+  },
 })
