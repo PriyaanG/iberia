@@ -1,10 +1,10 @@
 {
   "builds": [
     { "src": "index.js", "use": "@vercel/node" },
-    { "src": "dist/**", "use": "@vercel/static" }
+    { "src": "dist/**/*", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/iberia/discordoauth/redirect", "dest": "index.js" },
+    { "src": "^/iberia/discordoauth/redirect", "dest": "/index.js" },
     { "src": "/(.*)", "dest": "/dist/$1" }
   ]
 }
