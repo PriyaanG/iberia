@@ -4,7 +4,7 @@
     { "src": "dist/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/discordoauth/redirect", "dest": "index.js" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/iberia/discordoauth/redirect", "dest": "index.js" },
+    { "src": "/(.*)", "dest": "/dist/$1" }
   ]
 }
