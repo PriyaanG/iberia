@@ -1,10 +1,8 @@
 {
-  "builds": [
-    { "src": "index.js", "use": "@vercel/node" },
-    { "src": "dist/**/*", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "^/iberia/discordoauth/redirect", "dest": "/index.js" },
-    { "src": "/(.*)", "dest": "/dist/$1" }
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    { "source": "/iberia/discordoauth/redirect", "destination": "/api/index" }
   ]
 }
