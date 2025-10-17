@@ -11,13 +11,14 @@ function App() {
   return (
     <>
     <IberiaNavbar />
-    <div className="Hola">
+    <div className="Gracias">
    <h1 className="HolaText">Gracias para viajar con Iberia!</h1>
-   <h3 className="ConfirmationText">Thank you for choosing to fly with Iberia</h3>
+   <h3 className="ConfirmationText">Thank you for choosing to fly with Iberia VA.</h3>
  </div>
 
-   <h4>Confirmation (Confirmación)# {confirmationNumber}</h4>
-  
+   <h4 className="ConfirmationNumber">Confirmation (Confirmación)# {confirmationNumber}</h4>
+   <button className="Casa">Casa | Home</button>
+  <img height="300px" width="600px" className="EresMas" src="https://cdn.discordapp.com/attachments/1407941692547666070/1428864165375905893/IberiaAD1.png?ex=68f40cf4&is=68f2bb74&hm=79e1a4362bc2781155f64e84787b8b59fff267a0e7d89d5307dd22c7fafe5fc4"></img>
     </>
   )
 }

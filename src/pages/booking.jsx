@@ -32,8 +32,8 @@ function App() {
       <td>Economy</td>
   </tbody>
 </table>
-<a href="confirmation.html"><button>Comprar | Purchase</button></a>
-<a href="iberiava.vercel.app/" className="floatBottom"><button>Return to Home | Returno a Casa</button></a>
+<a href="confirmation.html"><button className="Comprar">Comprar | Purchase</button></a>
+<a href="iberiava.vercel.app/" className="floatBottom ReturnoCasa"><button>Return to Home | Returno a Casa</button></a>
     </>
   )
 }
