@@ -18,7 +18,7 @@ function flightNoSet (flightNum){
     <>
     <h1 className="RouteName" style={{ visibility:flightName}}>San Francisco to Madrid</h1>
     <h1 className="DeptTime" style={{visibility:flightName}}>Departure Time: 11pm EDT</h1>
-    <div className="floatBottom" style={{visibility:flightName}}><h1 className="ReduceWidth">Booking Class:</h1><a href="https://discord.com/oauth2/authorize?client_id=1347651472656961536&response_type=code&redirect_uri=https://priyaang.github.io%2Fiberia%2Fdiscordoauth%2Fredirect&scope=identify+guilds&state=Economy"><button className="splitBtns">Economy</button></a><a href="https://discord.com/oauth2/authorize?client_id=1347651472656961536&response_type=code&redirect_uri=https://priyaang.github.io%2Fiberia%2Fdiscordoauth%2Fredirect&scope=identify+guilds&state=Business"><button>Business</button></a></div>
+    <div className="floatBottom" style={{visibility:flightName}}><h1 className="ReduceWidth">Booking Class:</h1><a href="https://discord.com/oauth2/authorize?client_id=1347651472656961536&response_type=code&redirect_uri=https://iberiava.vercel.app/discordoauth/redirect&scope=identify+guilds&state=Economy"><button className="splitBtns">Economy</button></a><a href="https://discord.com/oauth2/authorize?client_id=1347651472656961536&response_type=code&redirect_uri=https://iberiava.vercel.app/discordoauth/redirect&scope=identify+guilds&state=Business"><button>Business</button></a></div>
     <IberiaNavbar />
       <h1 className="BookingText">Booking / Reserva</h1>
       <div className="Booking">
