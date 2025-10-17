@@ -234,5 +234,28 @@ border-radius: 5px;
   height:30%;
 }
 
+.Hola{
+  margin-bottom:5%;
+  color:white;
+  text-align:left;
+}
+
+table{
+  margin-bottom:25%;
+  border-radius:10;
+}
+
+.HolaText{
+  line-height:0.2;
+}
+
+td, th{
+  color:white;
+  border-color:white;
+  background-color:#808080;
+  border-radius:10;
+}
+
+
 
 
