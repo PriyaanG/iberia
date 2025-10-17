@@ -1,6 +1,6 @@
 import React from "react"
 import { useState } from 'react'
-import './App.css'
+import '../App.css'
 import Container from 'react-bootstrap/Container';
 import { Dropdown } from "bootstrap";
 import { createBootstrapComponent } from "react-bootstrap/esm/ThemeProvider";
