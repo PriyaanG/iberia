@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 
-app.get('/discordoauth/redirect', async (req, res) => {
+app.get('/', async (req, res) => {
   const { code, state } = req.query;
 
   if (!code) {
