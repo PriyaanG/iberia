@@ -1,9 +1,6 @@
 import express from 'express';
 import axios from 'axios';
-import dotenv from 'dotenv';
 import serverless from 'serverless-http';
-
-dotenv.config();
 
 const app = express();
 
