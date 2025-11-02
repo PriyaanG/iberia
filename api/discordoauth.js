@@ -13,7 +13,7 @@ export default async function handler(req, res) {
       client_secret: process.env.ClientSecret,
       grant_type: 'authorization_code',
       code: code.toString(),
-      redirect_uri: 'https://iberiava.vercel.app/api/discordoauth',
+      redirect_uri: 'https://iberiava.vercel.app/api/discordoauth.js',
     });
 
     const output = await axios.post(
