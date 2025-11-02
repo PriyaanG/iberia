@@ -5,13 +5,18 @@ import Container from 'react-bootstrap/Container';
 import { Dropdown } from "bootstrap";
 import { createBootstrapComponent } from "react-bootstrap/esm/ThemeProvider";
 import IberiaNavbar from "./navbar.jsx"
+// Get the current URL's search parameters
+const params = new URLSearchParams(window.location.search);
+const username = params.get('username'); // "alice"
+console.log(params.get('state'));  // "25"
+
 
 function App() {
   return (
     <>
     <IberiaNavbar />
     <div className="Hola">
-   <h1 className="HolaText">Hola Priyaanplayz,</h1>
+   <h1 className="HolaText">Hola {username},</h1>
    <h3 className="ConfirmationText">Confirm Your Details</h3>
    </div>
    <table border="1" cellPadding="10" style={{ borderCollapse: 'collapse', width: '100%' }}>
