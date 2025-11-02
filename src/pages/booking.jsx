@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 import IberiaNavbar from "./navbar.jsx";
 
+
 function App() {
   const [username, setUsername] = useState("");
   const [flightState, setFlightState] = useState({ flightNo: "-", class: "-" });

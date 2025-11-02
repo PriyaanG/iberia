@@ -5,9 +5,13 @@ import Container from 'react-bootstrap/Container';
 import { Dropdown } from "bootstrap";
 import { createBootstrapComponent } from "react-bootstrap/esm/ThemeProvider";
 import IberiaNavbar from "./navbar.jsx"
+import randomString from 'randomized-string';
 
 function App() {
-  var confirmationNumber = '7SFDSHW2IB090ABHOIEWLKML'
+  var confirmationNumber = randomString.generate({
+  prefix: "IB",
+  length: 12,
+});
   return (
     <>
     <IberiaNavbar />
