@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import IberiaNavbar from './navbar.jsx';
 import { Dropdown } from "bootstrap";
 import { createBootstrapComponent } from "react-bootstrap/esm/ThemeProvider";
-import base from "./airtableClient.js";
+import Airtable from "airtable";
 
 function App() {
   const [flightNo, setFlightNo] = useState("Flight / Vuelo #")
@@ -13,6 +13,8 @@ function App() {
     const [flightName, setFlightName] = useState("hidden")
     const [businessState, setBusinessState] = useState(encodeURIComponent(JSON.stringify({class:"Business", flightNo: flightNo})))
 const [economyState, setEconomyState] = useState(encodeURIComponent(JSON.stringify({class:"Economy", flightNo: flightNo})))
+
+var base = new Airtable({apiKey: patY2WSk3XXNbbPPH.5f3d2d4975799125042e459144c6175f5292cf97f24ce85901455ae0bfa9496b}).base('appNSl3HLBUj7Oeug');
 
 useEffect(() => {
   base('Table 1').select({
