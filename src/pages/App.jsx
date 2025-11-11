@@ -13,12 +13,22 @@ const [economyState, setEconomyState] = useState(encodeURIComponent(JSON.stringi
 var base = new Airtable({apiKey: "patY2WSk3XXNbbPPH.5f3d2d4975799125042e459144c6175f5292cf97f24ce85901455ae0bfa9496b"}).base('appNSl3HLBUj7Oeug');
 
 useEffect(() => {
-  base('Table 1').select({
-    view: "Grid view"
-}).firstPage(function page(records) {
-    const flights = records.map(record => record.get('FlightNumber'));
-setFlightNos(flights);
-  })}, [])
+  base('Table 1')
+    .select({ view: "Grid view" })
+    .firstPage((err, records) => {
+      if (err) {
+        console.error("Airtable error:", err);
+        return;
+      }
+
+      console.log("✅ Airtable response:", records);
+
+      const flights = records.map(record => record.get('FlightNumber'));
+      console.log("✈️ Flights:", flights);
+      setFlightNos(flights);
+    });
+}, []);
+
     
                       function flightNoSet (flightNum){
                              setFlightNo(flightNum)
