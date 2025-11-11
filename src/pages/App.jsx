@@ -1,10 +1,6 @@
-import React from "react"
 import { useState, useEffect} from 'react'
 import '../App.css'
-import Container from 'react-bootstrap/Container';
 import IberiaNavbar from './navbar.jsx';
-import { Dropdown } from "bootstrap";
-import { createBootstrapComponent } from "react-bootstrap/esm/ThemeProvider";
 import Airtable from "airtable";
 
 function App() {
