@@ -13,7 +13,7 @@ function App() {
     const [businessState, setBusinessState] = useState(encodeURIComponent(JSON.stringify({class:"Business", flightNo: flightNo})))
 const [economyState, setEconomyState] = useState(encodeURIComponent(JSON.stringify({class:"Economy", flightNo: flightNo})))
 
-var base = new Airtable({apiKey: process.env.VITE_AirtableAPIKey}).base('appNSl3HLBUj7Oeug');
+var base = new Airtable({apiKey: import.meta.env.VITE_AIRTABLE_API_KEY}).base('appNSl3HLBUj7Oeug');
 
 useEffect(() => {
   base('Table 1').select({
