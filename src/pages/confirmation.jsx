@@ -1,30 +1,51 @@
-import React from "react"
-import { useState } from 'react'
-import '../App.css'
-import Container from 'react-bootstrap/Container';
-import { Dropdown } from "bootstrap";
-import { createBootstrapComponent } from "react-bootstrap/esm/ThemeProvider";
-import IberiaNavbar from "./navbar.jsx"
-import randomString from 'randomized-string';
-
-function App() {
-  var confirmationNumber = randomString.generate({
-  prefix: "IB",
-  length: 12,
-});
-  return (
-    <>
-    <IberiaNavbar />
-    <div className="Gracias">
-   <h1 className="HolaText">Gracias para viajar con Iberia!</h1>
-   <h3 className="ConfirmationText">Thank you for choosing to fly with Iberia VA.</h3>
- </div>
-
-   <h4 className="ConfirmationNumber">Confirmation (Confirmación)# {confirmationNumber}</h4>
-   <button className="Casa">Casa | Home</button>
-  <img height="300px" width="600px" className="EresMas" src="../assets/IberiaAD1.webp"></img>
-    </>
-  )
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export default App
+function alphabet() {
+  const letters = "abcdefghijklmnopqrstuvwxyz";
+  const index = randomNumber(0, letters.length - 1);
+  return letters[index];
+}
+
+function App() {
+
+  const confirmationNumber =
+    "IB" +
+    randomNumber(1, 9) +
+    randomNumber(1, 9) +
+    randomNumber(1, 9) +
+    alphabet().toUpperCase() +
+    randomNumber(1, 9) +
+    randomNumber(1, 9) +
+    alphabet().toUpperCase() +
+    alphabet().toUpperCase() +
+    alphabet().toUpperCase();
+
+  return (
+    <>
+      <IberiaNavbar />
+      <div className="Gracias">
+        <h1 className="HolaText">Gracias para viajar con Iberia!</h1>
+        <h3 className="ConfirmationText">
+          Thank you for choosing to fly with Iberia VA.
+        </h3>
+      </div>
+
+      <h4 className="ConfirmationNumber">
+        Confirmation (Confirmación)# {confirmationNumber}
+      </h4>
+
+      <button className="Casa">Casa | Home</button>
+
+      <img
+        height="300px"
+        width="600px"
+        className="EresMas"
+        src="../assets/IberiaAD1.webp"
+      />
+    </>
+  );
+}
+
+export default App;
