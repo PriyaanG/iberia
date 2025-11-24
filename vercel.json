@@ -3,9 +3,7 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs20"
-    }
+    "api/**/*.js": {}
   },
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
