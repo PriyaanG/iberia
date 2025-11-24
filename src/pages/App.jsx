@@ -26,7 +26,7 @@ useEffect(() => {
         return;
       }
 
-      console.log("✅ Airtable response:", records);
+      console.log("Airtable response:", records);
 
       const flights = records
   .map(record => record.get("FlightNumber"))
