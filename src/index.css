@@ -31,7 +31,7 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1.1;
 }
 
@@ -123,8 +123,7 @@ h2{
 .BookingText{
   text-decoration:underline;
   position: absolute;  /* Take it out of the normal flow */
-  top: 120px;          /* Push it below your navbar (adjust as needed) */
-  left: 40px;          /* Space from the left edge */
+  top: 120px;          /* Push it below your navbar (adjust as needed) */         /* Space from the left edge */
   margin: 0;           /* Remove default h1 margin */
   font-size: 2rem;     /* Adjust size if needed */
   color: white;         /* Or any color */
@@ -133,8 +132,7 @@ h2{
 .Booking{
   text-decoration:underline;
   position: absolute;  /* Take it out of the normal flow */
-  top: 180px;          /* Push it below your navbar (adjust as needed) */
-  left: 40px;          /* Space from the left edge */
+  top: 180px;          /* Push it below your navbar (adjust as needed) */         /* Space from the left edge */
   margin: 0;           /* Remove default h1 margin */
   font-size: 2rem;     /* Adjust size if needed */
   color: white;         /* Or any color */
