@@ -1,4 +1,8 @@
-function randomNumber(min, max) {
+import IberiaNavbar from "./navbar.jsx";
+
+function App() {
+
+  function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -8,7 +12,6 @@ function alphabet() {
   return letters[index];
 }
 
-function App() {
 
   const confirmationNumber =
     "IB" +
