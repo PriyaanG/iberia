@@ -3,7 +3,9 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/booking", "dest": "/booking.html" },
+    { "src": "/confirmation", "dest": "/confirmation.html" },
+    { "src": "/", "dest": "/index.html" }
   ]
 }
