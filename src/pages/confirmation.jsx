@@ -51,7 +51,7 @@ function alphabet() {
         Confirmation (Confirmación)# {confirmationNumber}
       </h4>
 
-      <button className="Casa">Casa | Home</button>
+      <a href="/"><button className="Casa">Casa | Home</button></a>
 
       <img
         height="300px"

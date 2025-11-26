@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 export default function IberiaNavbar() {
   return (
     <Navbar className="bg-body-tertiary navbar" >
-         <a href="/iberia/index.html">
+         <a href="/">
              <Navbar.Brand>
                <img
                  alt="Iberia Logo"

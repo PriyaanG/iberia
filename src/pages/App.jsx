@@ -6,7 +6,11 @@ import Airtable from "airtable";
 function App() {
   const [flightNo, setFlightNo] = useState("Flight / Vuelo #")
   const [flightNos, setFlightNos] = useState([])
-    const [flightName, setFlightName] = useState("hidden")
+  const [flightName, setFlightName] = useState("hidden")
+  const [dbFlights, setDbFlights] = useState([])
+  const [arrival, setArrival] = useState([])
+  const [departure, setDeparture] = useState([])
+    const [time, setTime] = useState([])
 
 var base = new Airtable({apiKey: "patY2WSk3XXNbbPPH.5f3d2d4975799125042e459144c6175f5292cf97f24ce85901455ae0bfa9496b"}).base('appNSl3HLBUj7Oeug');
 
@@ -25,30 +29,35 @@ useEffect(() => {
         console.error("Airtable error:", err);
         return;
       }
-
       console.log("Airtable response:", records);
-
-      const flights = records
-  .map(record => record.get("FlightNumber"))
-  .filter(f => f);   // removes null, undefined, ""
-
+      const flights = records.map(record => record.get("FlightNumber")).filter(f => f);   // removes null, undefined, ""
       console.log("✈️ Flights:", flights);
       setFlightNos(flights);
+      setDbFlights(records);
     });
 }, []);
 
-                      function flightNoSet (flightNum){
-                             setFlightNo(flightNum)
-                              console.log(flightNum)
-                                setFlightName("visible")
+                      function flightNoSet(flightNum) {
+  setFlightNo(flightNum);
+  setFlightName("visible");
 
-                                    }
+  const flightData = dbFlights.find(
+    record => record.fields.FlightNumber === flightNum
+  );
+
+  if (!flightData) return; // prevent crashes
+
+  setDeparture(flightData.fields.Departure);
+  setArrival(flightData.fields.Arrival);
+  setTime(flightData.fields.Time);
+}
+
 
 const discordBase = "https://discord.com/oauth2/authorize?client_id=1347651472656961536&response_type=code&redirect_uri=https://iberiava.vercel.app/api/discordoauth.js&scope=identify+guilds";
                                       return (
                                           <>
-                                              <h1 className="RouteName" style={{ visibility:flightName}}>San Francisco to Madrid</h1>
-                                                  <h1 className="DeptTime" style={{visibility:flightName}}>Departure Time: 11pm EDT</h1>
+                                              <h1 className="RouteName" style={{ visibility:flightName}}>{departure} to {arrival}</h1>
+                                                  <h1 className="DeptTime" style={{visibility:flightName}}>Departure Time: {time}</h1>
                                                       <div className="floatBottom" style={{visibility:flightName}}><h1 className="ReduceWidth">Booking Class:</h1><a href={`${discordBase}&state=${encodeState("Economy")}`}><button className="splitBtns">Economy</button></a><a href={`${discordBase}&state=${encodeState("Business")}`}><button>Business</button></a></div>
                                                           <IberiaNavbar />
                                                                 <h1 className="BookingText">Booking / Reserva</h1>
