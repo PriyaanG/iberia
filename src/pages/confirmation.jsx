@@ -1,4 +1,5 @@
 import IberiaNavbar from "./navbar.jsx";
+import "../App.css";
 
 function App() {
 
