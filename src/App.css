@@ -45,3 +45,20 @@
 body{
   background: linear-gradient(to bottom, #DA162A, #C11623);
 }
+
+.AboutIberia{
+  width:50%;
+  font-size:25px;
+}
+
+.ConIberiaEresMasAD {
+  width:50%;
+  height:auto;
+  border-radius:10px;
+  position:absolute;
+  float:right;
+  margin-left: 42.5%;
+  margin-top: -5%;
+}
+
+

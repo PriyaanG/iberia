@@ -46,15 +46,15 @@ function App() {
         <tbody>
           <tr>
             <td>{flightState.flightNo}</td>
-            <td>San Francisco (SFO)</td>
-            <td>Madrid - Barajas (MAD)</td>
-            <td>11pm EDT</td>
+            <td>{flightState.salida}</td>
+            <td>{flightState.llegada}</td>
+            <td>{flightState.hora}</td>
             <td>{flightState.class}</td>
           </tr>
         </tbody>
       </table>
 
-      <a href="confirmation.html">
+      <a href="confirmation">
         <button className="Comprar">Comprar | Purchase</button>
       </a>
       <a href="https://iberiava.vercel.app/" className="floatBottom ReturnoCasa">

@@ -17,7 +17,10 @@ var base = new Airtable({apiKey: "patY2WSk3XXNbbPPH.5f3d2d4975799125042e459144c6
 function encodeState(className) {
   return encodeURIComponent(JSON.stringify({
     class: className,
-    flightNo: flightNo
+    flightNo: flightNo,
+    salida: departure,
+    llegada: arrival,
+    hora: time
   }));
 }
 
