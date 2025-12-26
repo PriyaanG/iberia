@@ -18,9 +18,9 @@ export default function IberiaNavbar() {
              <div className="buttons-container">
                <button className="button">Careers</button>
          
-               <button className="button">Server</button>
+               <a href="https://discord.gg/mvJ5VswqQa"><button className="button">Server</button></a>
              
-               <button className="button">About Us</button>
+               <a href="/about-us"><button className="button">About Us</button></a>
              
        
               <img 
