@@ -14,7 +14,7 @@ function App() {
 
 var base = new Airtable({apiKey: "patY2WSk3XXNbbPPH.5f3d2d4975799125042e459144c6175f5292cf97f24ce85901455ae0bfa9496b"}).base('appNSl3HLBUj7Oeug');
 
-function encodeState(className) {
+function encodeStates(className) {
   return encodeURIComponent(JSON.stringify({
     class: className,
     flightNo: flightNo,
@@ -61,7 +61,7 @@ const discordBase = "https://discord.com/oauth2/authorize?client_id=134765147265
                                           <>
                                               <h1 className="RouteName" style={{ visibility:flightName}}>{departure} to {arrival}</h1>
                                                   <h1 className="DeptTime" style={{visibility:flightName}}>Departure Time: {time}</h1>
-                                                      <div className="floatBottom" style={{visibility:flightName}}><h1 className="ReduceWidth">Booking Class:</h1><a href={`${discordBase}&state=${encodeState("Economy")}`}><button className="splitBtns">Economy</button></a><a href={`${discordBase}&state=${encodeState("Business")}`}><button>Business</button></a></div>
+                                                      <div className="floatBottom" style={{visibility:flightName}}><h1 className="ReduceWidth">Booking Class:</h1><a href={`${discordBase}&state=${encodeStates("Economy")}`}><button className="splitBtns">Economy</button></a><a href={`${discordBase}&state=${encodeStates("Business")}`}><button>Business</button></a></div>
                                                           <IberiaNavbar />
                                                                 <h1 className="BookingText">Booking / Reserva</h1>
                                                                       <div className="Booking">
