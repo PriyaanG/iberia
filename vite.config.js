@@ -9,7 +9,8 @@ export default defineConfig({
       input: {
         main: 'index.html',
         booking: 'booking.html',
-        confirmation: 'confirmation.html'
+        confirmation: 'confirmation.html',
+        about: 'about-us.html'
       },
     },
   },

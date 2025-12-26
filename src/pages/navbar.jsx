@@ -20,7 +20,7 @@ export default function IberiaNavbar() {
          
                <a href="https://discord.gg/mvJ5VswqQa"><button className="button">Server</button></a>
              
-               <a href="/about-us"><button className="button">About Us</button></a>
+               <a href="/about"><button className="button">About Us</button></a>
              
        
               <img 
