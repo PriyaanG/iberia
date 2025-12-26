@@ -6,6 +6,7 @@
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
     { "src": "/booking", "dest": "/booking.html" },
     { "src": "/confirmation", "dest": "/confirmation.html" },
+    { "src": "/about-us", "dest": "/about-us.html" },
     { "src": "/", "dest": "/index.html" }
   ]
 }
